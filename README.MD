@@ -1,5 +1,7 @@
 # Simple Recipe Page
 
+Depoly: https://gildeir.github.io/odin-recipes/index.html
+
 ## Description
 This is a basic HTML project built as part of The Odin Project curriculum. The goal of this project was to practice fundamental HTML structure and elements by creating a simple recipe webpage. The page includes sections for the recipe title, ingredients, and step-by-step cooking instructions. No CSS or JavaScript was used in this project, as the focus was solely on mastering the use of HTML tags and structure.
 
