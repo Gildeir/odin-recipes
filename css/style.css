@@ -1,49 +1,258 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: rgb(230, 226, 222);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --br: solid 2px red;
+  --bg: solid 2px green;
+  --bl: solid 2px blue;
+
 }
 
-.title{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 100px;
-    text-align: center;
+body, main, footer {
+  display: flex;
+  margin: 3px;
+  flex-wrap: wrap;
 }
 
-.container{
-    flex-wrap: wrap;
+
+.hero {
+  display: flex;
+  position: relative;
+  max-width: 100vw;
+  max-height: 100vh;
+  padding: 10px 10%;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.background-image {
-    width: 1800px;
-    height: 800PX;
+.hero::before {
+  content: "";
+  background-image: url(../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(8px);
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.logo {
+  border-top-right-radius: 30px;
+  border-top-left-radius: 300px;
+  border-bottom-left-radius: 300px;
+  border-bottom-right-radius: 300px;
+  width: 150px;
+  opacity: 0.6;
+}
+
+header {
+  display: flex;
+  flex: 1 1 100vw;
+  height: 150px;
+  flex-wrap: wrap;
+}
+
+nav {
+  display: flex;
+  flex: 1 1 100vw;
+  flex-wrap: wrap;
+  border: var(--br);
+  align-items: center;
+  justify-content:space-between;
+  margin-bottom: 50px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-decoration: none;
+  justify-content: space-around;
+  width: 60%;
+}
+
+nav ul li {
+  margin: 5px;
+  padding: 10px 40px;
+  border-radius: 50px;
+  border-top-right-radius: 0;
+  transition: 0.5s;
+  background: rgba(103, 183, 137, 1.0);
+  background: linear-gradient(135deg, rgba(103, 183, 137, 1.0), rgba(186, 93, 50, 1.0));
+}
+
+nav ul li:hover {
+
+  border-top-right-radius: 30px;
+  transition: 0.5s;
+}
+
+
+nav ul li a{
+  color: black;
+  list-style: none;
+  text-decoration: none;
+  margin: 10px 15px;
+  font-size: 23px;
+
+}
+
+.login-side {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* flex: 1 1 100vw; */
+
+  justify-content:flex-end;
+}
+
+.login-side a{
+  border: var(--bl);
+  display: flex;
+  color: black;
+  font-weight: 500;
+  list-style: none;
+  text-decoration: none;
+  margin: 10px 15px;
+  font-size: 23px;
+  align-items: center;
+}
+
+.download:hover {
+  border-top-right-radius: 30px;
+  transition: 0.5s;
+  }
+
+
+.download{
+  display: block;
+  flex-wrap: wrap;
+  padding: 10px 40px;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  transition: 0.5s;
+  background: rgba(103, 183, 137, 1.0);
+  background: linear-gradient(135deg, rgba(103, 183, 137, 1.0), rgba(186, 93, 50, 1.0));
+}
+
+.main-text {
+
+}
+
+.main-text, .images-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 35%;
+  margin: 0;               
+}
+
+.main-text {
+  display: flex;
+  max-width: 500px;
+  height: 100vh;
+  align-items:center ;
+
+}
+
+.phrase {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  height: 100vh;
+  font-size: 120px;
+
+}
+
+.images-section {
+  display: flex;
+  flex: 1 1 50vw;
 }
 
 .container-card {
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 100px;
 
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px;
+  height: 280px;
+  margin: 5px;
+  transition: 0.3s;
+  border: 8px solid rgb(179, 169, 162);
+  border-radius: 20%;
+  border-top: 20%;
+  margin: 5px;
+}
 
+.card a img {
+  border-radius: 20%;
+}
+
+.card-text {
+  font-size: 30px;
 }
 
 
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 10px 10px 10px 10px rgba(172, 163, 163, 0.651);
+
   }
 
   img {
-    border-radius: 5px 5px 0 0;
   }
 
   .text-card {
     padding: 2px 16px;
     font-weight: bold;
   }
+
+  @media (max-width: 768px) {
+    .menu {
+      display: none; /* Hide the menu by default on mobile */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+  
+    .menu li {
+      margin: 10px 0; /* Add some space between menu items */
+    }
+  
+    .menu-toggle {
+      display: block; /* Show the toggle button on mobile */
+    }
+  
+    .menu.open {
+      display: flex; /* Show the menu when open class is added */
+    }
+
+    .login-side {
+      display: flex;
+      flex-wrap: wrap; 
+      flex: 1 1 100vw
+    
+    }
+ }
+
+ @media (max-width: 1260px) {
+  .login-side {
+    display: flex;
+    flex-wrap: wrap; 
+    flex: 1 1 100vw;
+    justify-content: end;
+} 
+
+}
+
+
