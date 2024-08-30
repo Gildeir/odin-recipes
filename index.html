@@ -6,40 +6,61 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Odin Menu</title>
 </head>
-<body>
-    <h1 class="title">Odin Recipes</h1>
-    <div class="container">
-        <div class="container-card">
-            <div class="card">
-                <a href="./recipes/lasagna/lasanha.html" >
-                <img src="./recipes/lasagna/images/images.jpeg" width="500px" height="400px">
-                </a>
-                <div class="text-card">
-                    <p>World's best lasagna</p>
-                  </div>
+<body class="hero" >
+    <header>
+        <div class="background"></div>
+        <nav class="">
+            <img class="logo anim" src="./images/logo.svg"></img>
+            <ul>
+                <li><a href="./recipes/lasagna/lasanha.html">Lasagna</a></li>
+                <li><a href="./recipes/chicken-sandwiche/chicken-sandwiches.html">Chicken Sandwiche</a></li>
+                <li><a href="./recipes/palm-and-avocado-salad/palm-and-avocado-salad.html">Avocado Salad</a></li>
+            </ul>
+            <div class="login-side">
+                <a class="download anim"  href="#">Donwload App</a>
             </div>
-
-            <div class="card">
-                <a href="./recipes/chicken-sandwiche/chicken-sandwiches.html">
-                    <img src="./recipes/chicken-sandwiche/images/chicken-sandwiches.jpg" width="500px" height="400px">
-                </a>
-                <div class="text-card">
-                    <p>Delicous Chicken Sandwiche</p>
-                  </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section1 anim">
+            <p class="phrase">
+                Discover here your best recipe!
+            </p>
+        </section>
+        <section class="section2">
+            <div class="container-card">
+                <div class="card">
+                    <a href="./recipes/lasagna/lasanha.html" >
+                    <img src="./recipes/lasagna/images/images.jpeg" width="300px" height="200px">
+                    </a>
+                    <div class="text-card">
+                        <p class="card-text">World's Best Lasagna</p>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <a href="./recipes/chicken-sandwiche/chicken-sandwiches.html">
+                        <img src="./recipes/chicken-sandwiche/images/chicken-sandwiches.jpg" width="300px" height="200px">
+                    </a>
+                    <div class="text-card">
+                        <p class="card-text"> Chicken Sandwiche</p>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <a href="./recipes/palm-and-avocado-salad/palm-and-avocado-salad.html" >
+                        <img src="./recipes/palm-and-avocado-salad/images/palm-and-avocado.png" width="300px" height="200px">
+                    </a>
+                    <div class="text-card">
+                        <p class="card-text">Avocado Salad</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="card">
-                <a href="./recipes/palm-and-avocado-salad/palm-and-avocado-salad.html" >
-                    <img src="./recipes/palm-and-avocado-salad/images/palm-and-avocado.png" width="500px" height="400px">
-                </a>
-                <div class="text-card">
-                    <p>Avocado Salad</p>
-                  </div>
-            </div>
-
-
-        </div>
-    </div>
-
+    </main>
+    <footer class="anim">
+        <p>&copy; 2023 Your Recipe Website. All rights reserved.</p>
+      </footer>
 </body>
 </html>
