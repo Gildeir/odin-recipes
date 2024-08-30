@@ -14,25 +14,24 @@ body {
 }
 
 .hero {
-  position: relative; /* Necessário para o pseudo-elemento */
+  position: relative;
   width: 100%;
   min-height: 100vh;
   background-image: url('../images/hero.jpg');
   background-position: center;
   background-size: cover;
   padding: 10px 10%;
-  overflow: hidden;
 }
 
 .hero::before {
-  content: ""; /* Cria o pseudo-elemento */
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(252, 252, 252, 0.418); /* Cor semi-transparente para sobreposição */
-  z-index: 1; /* Coloca a sobreposição abaixo do conteúdo */
+  background: rgba(252, 252, 252, 0.418);
+  z-index: 1;
 }
 
 header, nav, .section1, .section2, footer {
@@ -45,6 +44,14 @@ header, nav, .section1, .section2, footer {
   display: flex;
   flex-wrap: wrap;
   margin: 3px;
+
+}
+
+.logo:hover {
+  border: 2px solid saddlebrown;
+  
+  transition: 0.10s;
+  color: #fcfcfc;
 
 }
 
@@ -89,12 +96,6 @@ nav ul li {
   background: linear-gradient(135deg, rgba(103, 183, 137, 1.0), rgba(186, 93, 50, 1.0));
 }
 
-nav ul li a:hover {
-
-  border-top-right-radius: 30px;
-  transition: 0.5s;
-}
-
 nav ul li a{
   display: block;
   flex-wrap: wrap;
@@ -104,13 +105,21 @@ nav ul li a{
   transition: 0.5s;
   background: rgba(103, 183, 137, 1.0);
   background: linear-gradient(135deg, rgba(103, 183, 137, 1.0), rgba(186, 93, 50, 1.0));
+}
 
+nav ul li a:hover{
+  background: linear-gradient(135deg, rgb(85, 182, 127), rgb(228, 186, 162));
+  border-top-right-radius: 30px;
+  transition: 0.5s;
+  color: #fcfcfc;
 
 }
 
 .download:hover {
   border-top-right-radius: 30px;
   transition: 0.5s;
+  background: linear-gradient(135deg, rgb(85, 182, 127), rgb(150, 57, 14));
+  color: #fcfcfc;
   }
 
 
@@ -164,12 +173,12 @@ main {
   align-items: center;
   justify-content: center;
   margin: 10px;
-  flex: 1 0; /* Adjust the flex-basis as needed */
+  flex: 1 0;
   margin: 10px;
 }
 
 .card a img {
-  border-radius: 20%;  
+  border-radius: 20%;
 }
 
 .text-card {
@@ -180,14 +189,18 @@ main {
   font-size: 1vw;
 }
 
+.section2 .container-card .card img:hover  {
+  border-radius: 20%;
+  border-top: 20%;
+  border: 8px solid rgb(223, 226, 178);
+}
 
 .section2 .container-card .card img {
+  display: flex;
   box-sizing: border-box;
-  border: 2px solid green;
   height: auto;
   max-height: 200px;
   object-fit: cover;
-  object-fit: contain;
   transition: 0.3s;
   border: 8px solid rgb(179, 169, 162);
   border-radius: 20%;
@@ -221,8 +234,17 @@ footer {
       height: calc(100vh - 100px);
   }
 
+  .section1 {
+    display: block;
+    width: 100vw;
+  }
+
   body, main {
-      min-width: 300px;
+    display: block;
+    min-width: 300px;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
 
   }
 }
@@ -232,6 +254,10 @@ footer {
      display: flex;
      flex-wrap: nowrap;
      flex-direction: column;
+  }
+
+  footer {
+    text-align: center;
   }
 }
 
@@ -245,7 +271,7 @@ footer {
       main {
           height: calc(100vh - 100px);
       }
-  
+
       body, header, main  {
           min-width: 380px;
       }
